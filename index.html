@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "path"
+                "docktop"
+                "main"
+                "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 5px;
+            max-width: 800px;
+            margin: auto;
+        }
+        
+        .header { grid-area: header; background: #66CCFF; padding: 10px; text-align: center; }
+        .path { grid-area: path; background: #FF99FF; padding: 10px; text-align: center; }
+        .docktop { grid-area: docktop; background: #FFFF99; padding: 10px; text-align: center; }
+        .main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: "content dockright";
+            gap: 5px;
+        }
+        .content { grid-area: content; background: #A0A0A0; padding: 20px; text-align: center; height: 200px;}
+        .dockright { grid-area: dockright; background: #CCFF99; padding: 20px; text-align: center; }
+        .footer { grid-area: footer; background: #FF9966; padding: 10px; text-align: center; }
+</style>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="path">PATH</div>
+        <div class="docktop">DOCKTOP</div>
+        <div class="main">
+            <div class="content">CONTENT</div>
+            <div class="dockright">DOCKRIGHT</div>
+        </div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>
